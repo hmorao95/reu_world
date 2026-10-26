@@ -32,7 +32,8 @@ reu_world/
 │   ├── raw/
 │   │   └── num_hits.csv # raw monthly article counts per source (index numerator and denominator)
 │   └── processed/
-│       └── index.csv    # computed REU index (long form, four series)
+│       ├── index.csv    # computed REU index (long form, four series)
+│       └── index.xlsx   # computed REU index (spreadsheet)
 ├── CITATION.cff         # machine-readable citation metadata
 ├── CHANGELOG.md         # record of notable changes
 ├── LICENSE              # license terms (CC BY 4.0)
@@ -44,7 +45,7 @@ The index is built in three stages, moving left to right through the folders abo
 
 1. **Define the search** — `config/config.json` holds the exact boolean query (rare-earth and shortage terms, the word-count filter, and excluded subject codes) together with the target language and reporting interval. `config/sources.csv` lists the media sources to query and the coverage window over which each is available.
 2. **Collect raw counts** — running the query in `config.json` against each source in `sources.csv` (via the news database, e.g. Factiva) yields `data/raw/num_hits.csv`: for every source and month, the number of matching articles (`num_hits`) and the total number of articles published (`total_articles`).
-3. **Compute the index** — the raw counts are scaled by each source's total article volume, aggregated across sources (optionally weighted by `importance`), and standardized to produce `data/processed/index.csv`. The result covers 2008-01 through the latest available month.
+3. **Compute the index** — the raw counts are scaled by each source's total article volume, aggregated across sources (optionally weighted by `importance`), and standardized to produce `data/processed/index.csv`. The result is provided in both CSV and XLSX form and covers 2008-01 through the latest available month.
 
 ### Data Dictionary
 **`config/config.json`**
@@ -73,7 +74,7 @@ The index is built in three stages, moving left to right through the folders abo
 | `error` | Retrieval error message, if any (empty on success). |
 | `num_tries` | Number of retrieval attempts made. |
 
-**`data/processed/index.csv`**
+**`data/processed/index.csv`** (and `index.xlsx`)
 | Column | Description |
 | --- | --- |
 | `year`, `month` | Period of the observation. |
