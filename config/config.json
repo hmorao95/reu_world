@@ -2,5 +2,5 @@
 "type": "index",
 "languages": ["English"],
 "interval": "Monthly",
-"search_text": "wc>150 AND ((in=IRAREMET OR hlp=(rare earth$1 OR lanthanide* OR neodymium OR dysprosium OR praseodymium OR terbium OR europium OR yttrium OR samarium OR cerium OR lanthanum OR scandium)) AND (ns=CPSHRT OR shortage$1 OR scarcit* OR backlog$1 OR disruption$1 OR bottleneck$1)) NOT ns=(nsum OR ncdig OR ncal OR nran OR nrmf OR nnam OR niex OR nedc OR nhoc OR npdn OR nrgn OR nhrd OR nlet OR namt OR npan OR nobt OR nitv OR niex OR nhrd)"
+"search_text": "wc>99 AND wc<2000 AND ((in=IRAREMET OR rare earth$1 OR lanthanide* OR neodymium OR dysprosium OR praseodymium OR terbium OR europium OR yttrium OR samarium OR cerium OR lanthanum OR scandium) AND (ns=CPSHRT OR shortage$1 OR scarcit* OR backlog$1 OR disruption$1 OR bottleneck$1)) NOT ns=(nsum OR ncdig OR ncal OR nran OR nrmf OR nnam OR niex OR nedc OR nhoc OR npdn OR nrgn OR nhrd OR nlet OR namt OR npan OR nobt OR nitv OR niex OR nhrd)"
 }

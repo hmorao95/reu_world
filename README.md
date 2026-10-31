@@ -17,10 +17,10 @@ The index follows the Baker et al. (2016) methodology for search-based indices, 
 
 2. **Shortage (S)** — supply-disruption language such as *shortage*, *scarcity*, *backlog*, *disruption*, and *bottleneck* (including the relevant supply/shortage subject codes).
 
-An article is counted only when it contains at least one term from each category and has a word count exceeding 150 words. Articles that are summaries of news, corporate digests, calendars of events, rankings-based content, routine general and market/financial news, news agency materials, letters, headline-only content, personal announcements, contract tenders, obituaries, and TV/Radio listings are excluded to ensure that only relevant articles are selected. The exact boolean query used to retrieve articles is stored in `config/config.json`.
+An article is counted only when its full text contains at least one term from each category and it is between 100 and 1,999 words long. Articles that are summaries of news, corporate digests, calendars of events, rankings-based content, routine general and market/financial news, news agency materials, letters, headline-only content, personal announcements, contract tenders, obituaries, and TV/Radio listings are excluded to ensure that only relevant articles are selected. The exact boolean query used to retrieve articles is stored in `config/config.json`.
 
 ## Coverage and Data Quality
-The index is monthly and begins in January 2008. It draws on a network of English-language media sources across major economies, including the United States, United Kingdom, Canada, Australia, and Asia-Pacific markets. The full list of sources, with each source's coverage window and importance weight, is provided in `config/sources.csv`.
+The index is monthly and begins in January 2008. It draws on 25 English-language media sources across major economies, including the United States, United Kingdom, Canada, Australia, and Asia-Pacific markets. Few articles discussed rare-earth shortages before 2010, so some early months read zero. The full list of sources, with each source's coverage window and importance weight, is provided in `config/sources.csv`.
 
 ## Repository Structure
 ```
@@ -32,7 +32,7 @@ reu_world/
 │   ├── raw/
 │   │   └── num_hits.csv # raw monthly article counts per source (index numerator and denominator)
 │   └── processed/
-│       ├── index.csv    # computed REU index (long form, four series)
+│       ├── index.csv    # computed REU index (two series)
 │       └── index.xlsx   # computed REU index (spreadsheet)
 ├── CITATION.cff         # machine-readable citation metadata
 ├── CHANGELOG.md         # record of notable changes
@@ -54,7 +54,7 @@ The index is built in three stages, moving left to right through the folders abo
 | `type` | Index type (`index`). |
 | `languages` | Languages of the retrieved articles. |
 | `interval` | Reporting frequency of the index (`Monthly`). |
-| `search_text` | The full boolean query: a rare-earth industry code / rare-earth terms combined with supply-shortage terms, the word-count filter (`wc>150`), and excluded subject codes (`NOT ns=...`). |
+| `search_text` | The full boolean query: a rare-earth industry code / rare-earth terms combined with supply-shortage terms, the word-count filter (`wc>99 AND wc<2000`), and excluded subject codes (`NOT ns=...`). |
 
 **`config/sources.csv`**
 | Column | Description |
@@ -78,10 +78,8 @@ The index is built in three stages, moving left to right through the folders abo
 | Column | Description |
 | --- | --- |
 | `year`, `month` | Period of the observation. |
-| `unstandardized` | Aggregate scaled article frequency, equal source weighting. |
-| `unstandardized weighted` | Aggregate scaled article frequency, weighted by source `importance`. |
-| `standardized` | Standardized (mean/standard-deviation normalized) REU index, equal weighting. |
-| `standardized weighted` | Standardized REU index, weighted by source `importance`. |
+| `standardized` | REU index: each source's scaled count is divided by its standard deviation, averaged across sources, and rescaled to a mean of 100. |
+| `standardized weighted` | The same, with each source weighted by its share of total articles. |
 
 ## How to Cite
 If you use this index or dataset, please cite the companion paper:

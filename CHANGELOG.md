@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2026-10-31
+
+### Changed
+- New search query: the rare-earth and shortage terms are matched in the full
+  text rather than the headline and lead paragraph, and articles must be 100 to
+  1,999 words long (previously more than 150).
+- New source importance weights in `config/sources.csv`.
+- Extended the index to 2026-09. It still starts in 2008-01.
+- `data/processed/index.csv` and `index.xlsx` hold the two standardized series
+  only; the unstandardized series are no longer published.
+
 ## [1.1.0] - 2026-10-26
 
 ### Added
