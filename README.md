@@ -1,6 +1,6 @@
-# A Rare-Earth Supply Uncertainty (REU) Index
+# A Rare-Earth Uncertainty (REU) Index
 
-The Rare-Earth Supply Uncertainty (REU) index measures the intensity of reported disruptions to the global supply of rare-earth elements through comprehensive media analysis. Building on the search-based methodology of Baker, Bloom, and Davis (2016), the index tracks how frequently the news jointly discusses rare-earth elements and supply shortages, providing a high-frequency signal of stress in rare-earth markets.
+The Rare-Earth Uncertainty (REU) index measures the intensity of reported disruptions to the global supply of rare-earth elements through comprehensive media analysis. Building on the search-based methodology of Baker, Bloom, and Davis (2016), the index tracks how frequently the news jointly discusses rare-earth elements and supply shortages, providing a high-frequency signal of stress in rare-earth markets.
 
 **Reference**: Morão (2025)  
 Hugo Morão,  

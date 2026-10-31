@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this index or dataset, please cite the companion paper below."
-title: "A Rare-Earth Supply Uncertainty (REU) Index"
+title: "A Rare-Earth Uncertainty (REU) Index"
 abstract: >-
-  A search-based Rare-Earth Supply Uncertainty (REU) index measuring reported
+  A search-based Rare-Earth Uncertainty (REU) index measuring reported
   disruptions to the global supply of rare-earth elements. Building on Baker,
   Bloom, and Davis (2016), the index tracks the frequency of news articles
   jointly referencing rare-earth elements and supply-shortage language, from
