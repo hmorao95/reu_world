@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.1] - 2026-10-31
+
+### Changed
+- Financial Times: total article counts for 2008-01 to 2024-12 are now taken from the
+  ETU index, which counts the same newspaper under its Factiva name "Financial Times
+  (Available to Academic Subscribers Only)". The REU search returned no total for these
+  months; its matching-article counts for them are zero. Updated `data/raw/num_hits.csv`,
+  `data/processed/index.csv` and `data/processed/index.xlsx`.
+
 ## [2.0.0] - 2026-10-31
 
 ### Changed
