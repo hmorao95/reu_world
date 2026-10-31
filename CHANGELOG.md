@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Renamed the index to the Rare-Earth Uncertainty (REU) index.
+- Citation updated to the published paper (Resources Policy, 2026).
 - New search query: the rare-earth and shortage terms are matched in the full
   text rather than the headline and lead paragraph, and articles must be 100 to
   1,999 words long (previously more than 150).

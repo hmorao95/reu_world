@@ -2,10 +2,11 @@
 
 The Rare-Earth Uncertainty (REU) index measures the intensity of reported disruptions to the global supply of rare-earth elements through comprehensive media analysis. Building on the search-based methodology of Baker, Bloom, and Davis (2016), the index tracks how frequently the news jointly discusses rare-earth elements and supply shortages, providing a high-frequency signal of stress in rare-earth markets.
 
-**Reference**: Morão (2025)  
+**Reference**: Morão (2026)  
 Hugo Morão,  
 Do Rare-Earth Supply Constraints Slow the Green Transition?,  
-working paper, 2025.  
+Resources Policy, 2026.  
+https://doi.org/10.1016/j.resourpol.2026.106047  
 
 ## Economic Intuition Behind the Index
 Rare-earth elements—neodymium, dysprosium, praseodymium, terbium, and the other lanthanides—are critical inputs to magnets, electric motors, wind turbines, and a wide range of clean-energy and defense technologies. Their supply is highly concentrated and exposed to export controls and processing bottlenecks. Shortages, scarcity, and logistical disruptions in this segment raise input costs, threaten technology supply chains, and propagate into broader economic uncertainty. By quantifying media coverage of rare-earth supply disruptions, the REU index provides an early, quantitative indicator of stress in these strategically important markets.
@@ -84,10 +85,9 @@ The index is built in three stages, moving left to right through the folders abo
 ## How to Cite
 If you use this index or dataset, please cite the companion paper:
 
-> Hugo Morão, "Do Rare-Earth Supply Constraints Slow the Green Transition?," working paper, 2025.
+> Hugo Morão, "Do Rare-Earth Supply Constraints Slow the Green Transition?," Resources Policy, 2026. https://doi.org/10.1016/j.resourpol.2026.106047
 
-A machine-readable citation is available in `CITATION.cff`. This entry will be
-updated with the journal, volume, and DOI once the paper is published.
+A machine-readable citation is available in `CITATION.cff`.
 
 ## License
 The data and documentation in this repository are released under the
